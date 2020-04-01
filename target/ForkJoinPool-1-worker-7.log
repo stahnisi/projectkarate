@@ -1,0 +1,58 @@
+01:18:59.183 type was null, defaulting to 'chrome'
+01:20:07.198 driver config / start failed: 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:9222 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused), options: {type=chrome, target=null}
+01:20:07.204 javascript function call failed: ReferenceError: "driver" is not defined
+01:20:07.204 failed function body: function()
+{
+if (karate.info.errorMessage) driver.screenshot()
+}
+01:20:07.204 afterScenario hook failed: javascript function call failed: ReferenceError: "driver" is not defined
+
+01:17:05.246 waitUntil (js) - retry #15
+01:17:11.258 failed after 15 retries and 93127 milliseconds
+01:17:11.414 feature call failed: classpath:Intercars/Europe_E/CZE/Testcases/Components/CZE_addTireToCart.feature
+arg: null
+CZE_addTireToCart.feature:8 - javascript evaluation failed: waitFor('a[data-testid=ShoppingRoute_ShoppingLayout_Menu_MenuItem_Link]').click(), wait failed for: [a[data-testid=ShoppingRoute_ShoppingLayout_Menu_MenuItem_Link]] after 93128 milliseconds
+01:17:26.422 javascript function call failed: failed to get reply for: [id: 27, method: Page.captureScreenshot]
+01:17:26.422 failed function body: function()
+{
+if (karate.info.errorMessage) driver.screenshot()
+}
+01:17:26.423 afterScenario hook failed: javascript function call failed: failed to get reply for: [id: 27, method: Page.captureScreenshot]
+f
+1 < X-Powered-By: Express
+{
+  "name": "Test User",
+  "username": "testuser",
+  "email": "test@user.com",
+  "address": {
+    "street": "Has No Name",
+    "suite": "Apt. 123",
+    "city": "Electri",
+    "zipcode": "54321-6789"
+  },
+  "id": 11
+}
+
+10:51:16.577 [print] created id is:  11
+1
+09:35:07.970 karate.env system property was:  
+09:35:07.975 type was null, defaulting to 'chrome'
+09:35:08.073 preferred port 9222 not available, will use: 51820
+09:35:25.252 waitUntil (js) - retry #1
+09:35:30.661 waitUntil (js) - retry #1
+09:35:34.246 waitUntil (js) - retry #2
+09:35:37.253 waitUntil (js) - retry #3
+09:35:44.196 waitUntil (js) - retry #1
+09:35:47.436 waitUntil (js) - retry #1
+1:42:03.030 [print] 2483
+01:42:03.126 karate.env system property was:  
+01:42:03.129 type was null, defaulting to 'chrome'
+01:42:03.130 preferred port 9222 not available, will use: 61848
+01:42:08.192 waitUntil (js) - retry #1
+01:42:13.766 waitUntil (js) - retry #1
+01:42:16.774 waitUntil (js) - retry #2
+01:42:22.984 waitUntil (js) - retry #1
+01:42:26.067 waitUntil (js) - retry #1
+01:42:31.486 waitUntil (js) - retry #1
+01:42:34.513 [print] 2487

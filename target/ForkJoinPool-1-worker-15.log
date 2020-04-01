@@ -1,0 +1,5 @@
+01:40:30.704 karate.env system property was:  
+01:40:30.747 type was null, defaulting to 'chrome'
+01:40:30.755 preferred port 9222 not available, will use: 61403
+01:39:19.129 driver config / start failed: 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:60924 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused), options: {type=chrome, target=null}

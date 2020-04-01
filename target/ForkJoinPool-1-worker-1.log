@@ -1,0 +1,108 @@
+12:28:20.539 type was null, defaulting to 'chrome'
+12:28:20.558 preferred port 9222 not available, will use: 53424
+12:29:28.123 driver config / start failed: 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:53424 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused), options: {type=chrome, target=null}
+12:29:28.133 javascript function call failed: ReferenceError: "driver" is not defined
+12:29:28.133 failed function body: function()
+{
+if (karate.info.errorMessage) driver.screenshot()
+}
+12:29:28.133 afterScenario hook failed: javascript function call failed: ReferenceError: "driver" is not defined
+5.306 failed after 6 retries and 60036 milliseconds
+21:02:40.310 javascript function call failed: failed to get reply for: [id: 29, method: Page.captureScreenshot]
+21:02:40.311 failed function body: function()
+{
+if (karate.info.errorMessage) driver.screenshot()
+}
+21:02:40.311 afterScenario hook failed: javascript function call failed: failed to get reply for: [id: 29, method: Page.captureScreenshot]
+uat.cze.nonprod.ic.oxuscloud.com/cz/eshop"
+                   break;
+              case "ref":
+                   cfgUrlEshopHomepage = "https://storefront-cz-v1-ref.cze.nonprod.ic.oxuscloud.com/cz/eshop"
+                   break;
+              case "prod":
+                   cfgUrlEshopHomepage = "https://storefront-cz-v1-dev.stratox.nonprod.ic.oxuscloud.com/cz/eshop/"
+                   break;
+          }
+          break;
+    }
+
+    var config = { // base config JSON
+      environment: env,
+      country: cnt,
+      parallel: par,
+      urlBackoffice: cfgUrlBackoffice,
+      urlEshopHomepage: cfgUrlEshopHomepage
+    };
+
+ // var evars= java.lang.System.getenv();
+ // karate.log(evars);
+
+  karate.configure('afterScenario', read('afterScenarioScreenshot.js'))
+
+  karate.configure('retry',{count:6, interval:10000});
+  //karate.configure('driver',{type:'chrome',headless:'headless mode'})
+  karate.configure('driver',{type:'chrome'};
+
+  karate.configure('connectTimeout', 25000);
+  karate.configure('readTimeout', 25000);
+  return config;
+}, <eval>:49:43 Expected , but found ;
+  karate.configure('driver',{type:'chrome'};
+                                           ^ in <eval> at line number 49 at column number 43
+20:29:45.890 evaluation of 'karate-config.js' failed: javascript evaluation failed: read('classpath:karate-config.js'), javascript evaluation failed: function() {
+  var env = karate.env; // get java system property 'karate.env'
+  var cnt = karate.properties['karate.cnt'];
+  var par = karate.properties['karate.par'];
+//  karate.log('karate.env system property was:', env);
+  var cfgUrlEshopHomepage;
+  var cfgUrlBackoffice;
+
+  switch (cnt) {
+      case "cze":
+          switch (env){
+              case "dev":
+                   cfgUrlEshopHomepage = "https://storefront-cz-v1-dev.stratox.nonprod.ic.oxuscloud.com/cz/eshop/"
+                   break;
+              case "int":
+                   cfgUrlEshopHomepage = "https://storefront-cz-v1-int.cze.nonprod.ic.oxuscloud.com/cz/eshop"
+                   break;
+              case "sit":
+                   cfgUrlEshopHomepage = "https://storefront-cz-v1-sit.cze.nonprod.ic.oxuscloud.com/cz/eshop"
+                   break;
+              case "uat":
+                   cfgUrlEshopHomepage = "https://storefront-cz-v1-uat.cze.nonprod.ic.oxuscloud.com/cz/eshop"
+                   break;
+              case "ref":
+                   cfgUrlEshopHomepage = "https://storefront-cz-v1-ref.cze.nonprod.ic.oxuscloud.com/cz/eshop"
+                   break;
+              case "prod":
+                   cfgUrlEshopHomepage = "https://storefront-cz-v1-dev.stratox.nonprod.ic.oxuscloud.com/cz/eshop/"
+                   break;
+          }
+          break;
+    }
+
+    var config = { // base config JSON
+      environment: env,
+      country: cnt,
+      parallel: par,
+      urlBackoffice: cfgUrlBackoffice,
+      urlEshopHomepage: cfgUrlEshopHomepage
+    };
+
+ // var evars= java.lang.System.getenv();
+ // karate.log(evars);
+
+  karate.configure('afterScenario', read('afterScenarioScreenshot.js'))
+
+  karate.configure('retry',{count:6, interval:10000});
+  //karate.configure('driver',{type:'chrome',headless:'headless mode'})
+  karate.configure('driver',{type:'chrome'};
+
+  karate.configure('connectTimeout', 25000);
+  karate.configure('readTimeout', 25000);
+  return config;
+}, <eval>:49:43 Expected , but found ;
+  karate.configure('driver',{type:'chrome'};
+                                           ^ in <eval> at line number 49 at column number 43

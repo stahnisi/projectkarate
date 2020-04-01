@@ -1,0 +1,967 @@
+01:18:59.183 type was null, defaulting to 'chrome'
+01:18:59.205 preferred port 9222 not available, will use: 58413
+01:19:18.663 waitUntil (js) - retry #1
+01:19:21.847 waitUntil (js) - retry #2
+01:19:28.294 waitUntil (js) - retry #1
+01:19:31.382 waitUntil (js) - retry #1
+01:19:43.600 waitUntil (js) - retry #1
+01:19:46.618 [print] 2637
+ns: {type=chrome, target=null}
+01:16:27.355 javascript function call failed: ReferenceError: "driver" is not defined
+01:16:27.355 failed function body: function()
+{
+if (karate.info.errorMessage) driver.screenshot()
+}
+01:16:27.357 afterScenario hook failed: javascript function call failed: ReferenceError: "driver" is not defined
+4:32.426 waitUntil (js) - retry #11
+01:14:35.431 waitUntil (js) - retry #12
+01:14:38.438 waitUntil (js) - retry #13
+01:14:41.444 waitUntil (js) - retry #14
+01:14:44.447 waitUntil (js) - retry #15
+01:14:47.454 failed after 15 retries and 45115 milliseconds
+01:15:02.463 javascript function call failed: failed to get reply for: [id: 45, method: Page.captureScreenshot]
+01:15:02.463 failed function body: function()
+{
+if (karate.info.errorMessage) driver.screenshot()
+}
+01:15:02.464 afterScenario hook failed: javascript function call failed: failed to get reply for: [id: 45, method: Page.captureScreenshot]
+Id":"{\"injectedScriptId\":1,\"id\":6}"}
+ milliseconds
+00:44:48.010 javascript function call failed: failed to get reply for: [id: 73, method: Page.captureScreenshot]
+00:44:48.011 failed function body: function()
+{
+if (karate.info.errorMessage) driver.screenshot()
+}
+00:44:48.011 afterScenario hook failed: javascript function call failed: failed to get reply for: [id: 73, method: Page.captureScreenshot]
+ad property 'click' of null\n    at <anonymous>:1:107","objectId":"{\"injectedScriptId\":1,\"id\":6}"}
+CZE_orderStep3.feature:23 - javascript evaluation failed: click('button[data-testid=Checkout_UserDataSelection_ButtonBar_NextBtn_PrimaryBtn]'), js eval failed twice:document.querySelector("button[data-testid=Checkout_UserDataSelection_ButtonBar_NextBtn_PrimaryBtn]").click(), error: {"type":"object","subtype":"error","className":"TypeError","description":"TypeError: Cannot read property 'click' of null\n    at <anonymous>:1:102","objectId":"{\"injectedScriptId\":1,\"id\":10}"}
+00:30:03.627 javascript function call failed: failed to get reply for: [id: 55, method: Page.captureScreenshot]
+00:30:03.627 failed function body: function()
+{
+if (karate.info.errorMessage) driver.screenshot()
+}
+00:30:03.627 afterScenario hook failed: javascript function call failed: failed to get reply for: [id: 55, method: Page.captureScreenshot]
+
+18:35:04.489 waitUntil (js) - retry #5
+18:35:24.500 waitUntil (js) - retry #6
+18:35:44.510 failed after 6 retries and 100055 milliseconds
+18:35:59.519 javascript function call failed: failed to get reply for: [id: 31, method: Page.captureScreenshot]
+18:35:59.519 failed function body: function()
+{
+if (karate.info.errorMessage) driver.screenshot()
+}
+18:35:59.519 afterScenario hook failed: javascript function call failed: failed to get reply for: [id: 31, method: Page.captureScreenshot]
+              case "int":
+                   cfgUrlEshopHomepage = "https://storefront-cz-v1-int.cze.nonprod.ic.oxuscloud.com/cz/eshop"
+                   break;
+              case "sit":
+                   cfgUrlEshopHomepage = "https://storefront-cz-v1-sit.cze.nonprod.ic.oxuscloud.com/cz/eshop"
+                   break;
+              case "uat":
+                   cfgUrlEshopHomepage = "https://storefront-cz-v1-uat.cze.nonprod.ic.oxuscloud.com/cz/eshop"
+                   break;
+              case "ref":
+                   cfgUrlEshopHomepage = "https://storefront-cz-v1-ref.cze.nonprod.ic.oxuscloud.com/cz/eshop"
+                   break;
+              case "prod":
+                   cfgUrlEshopHomepage = "https://storefront-cz-v1-dev.stratox.nonprod.ic.oxuscloud.com/cz/eshop/"
+                   break;
+          }
+          break;
+    }
+
+    var config = { // base config JSON
+      environment: env,
+      country: cnt,
+      parallel: par,
+      urlBackoffice: cfgUrlBackoffice,
+      urlEshopHomepage: cfgUrlEshopHomepage
+    };
+
+ // var evars= java.lang.System.getenv();
+ // karate.log(evars);
+
+  karate.configure('afterScenario', read('afterScenarioScreenshot.js'))
+
+  karate.configure('retry',{count:6, interval:10000});
+
+  karate.configure('driver', {'--headless'});
+
+//  driver = { type: 'chrome', addOptions: ['--headless'] }
+
+//  karate.configure('driver',{type:'chrome'});
+
+  //karate.configure('driver',{type:'chrome',headless:'headless mode'})
+  //karate.configure('driver',{type:'chrome'};
+
+  karate.configure('connectTimeout', 25000);
+  karate.configure('readTimeout', 25000);
+  return config;
+}, <eval>:49:42 Expected : but found }
+  karate.configure('driver', {'--headless'});
+                                          ^ in <eval> at line number 49 at column number 42
+16:34:11.921 evaluation of 'karate-config.js' failed: javascript evaluation failed: read('classpath:karate-config.js'), javascript evaluation failed: function() {
+  var env = karate.env; // get java system property 'karate.env'
+  var cnt = karate.properties['karate.cnt'];
+  var par = karate.properties['karate.par'];
+//  karate.log('karate.env system property was:', env);
+  var cfgUrlEshopHomepage;
+  var cfgUrlBackoffice;
+
+  switch (cnt) {
+      case "cze":
+          switch (env){
+              case "dev":
+                   cfgUrlEshopHomepage = "https://storefront-cz-v1-dev.stratox.nonprod.ic.oxuscloud.com/cz/eshop/"
+                   break;
+              case "int":
+                   cfgUrlEshopHomepage = "https://storefront-cz-v1-int.cze.nonprod.ic.oxuscloud.com/cz/eshop"
+                   break;
+              case "sit":
+                   cfgUrlEshopHomepage = "https://storefront-cz-v1-sit.cze.nonprod.ic.oxuscloud.com/cz/eshop"
+                   break;
+              case "uat":
+                   cfgUrlEshopHomepage = "https://storefront-cz-v1-uat.cze.nonprod.ic.oxuscloud.com/cz/eshop"
+                   break;
+              case "ref":
+                   cfgUrlEshopHomepage = "https://storefront-cz-v1-ref.cze.nonprod.ic.oxuscloud.com/cz/eshop"
+                   break;
+              case "prod":
+                   cfgUrlEshopHomepage = "https://storefront-cz-v1-dev.stratox.nonprod.ic.oxuscloud.com/cz/eshop/"
+                   break;
+          }
+          break;
+    }
+
+    var config = { // base config JSON
+      environment: env,
+      country: cnt,
+      parallel: par,
+      urlBackoffice: cfgUrlBackoffice,
+      urlEshopHomepage: cfgUrlEshopHomepage
+    };
+
+ // var evars= java.lang.System.getenv();
+ // karate.log(evars);
+
+  karate.configure('afterScenario', read('afterScenarioScreenshot.js'))
+
+  karate.configure('retry',{count:6, interval:10000});
+
+  karate.configure('driver', {'--headless'});
+
+//  driver = { type: 'chrome', addOptions: ['--headless'] }
+
+//  karate.configure('driver',{type:'chrome'});
+
+  //karate.configure('driver',{type:'chrome',headless:'headless mode'})
+  //karate.configure('driver',{type:'chrome'};
+
+  karate.configure('connectTimeout', 25000);
+  karate.configure('readTimeout', 25000);
+  return config;
+}, <eval>:49:42 Expected : but found }
+  karate.configure('driver', {'--headless'});
+                                          ^ in <eval> at line number 49 at column number 42
+.ic.oxuscloud.com/cz/eshop/"
+                   break;
+              case "int":
+                   cfgUrlEshopHomepage = "https://storefront-cz-v1-int.cze.nonprod.ic.oxuscloud.com/cz/eshop"
+                   break;
+              case "sit":
+                   cfgUrlEshopHomepage = "https://storefront-cz-v1-sit.cze.nonprod.ic.oxuscloud.com/cz/eshop"
+                   break;
+              case "uat":
+                   cfgUrlEshopHomepage = "https://storefront-cz-v1-uat.cze.nonprod.ic.oxuscloud.com/cz/eshop"
+                   break;
+              case "ref":
+                   cfgUrlEshopHomepage = "https://storefront-cz-v1-ref.cze.nonprod.ic.oxuscloud.com/cz/eshop"
+                   break;
+              case "prod":
+                   cfgUrlEshopHomepage = "https://storefront-cz-v1-dev.stratox.nonprod.ic.oxuscloud.com/cz/eshop/"
+                   break;
+          }
+          break;
+    }
+
+    var config = { // base config JSON
+      environment: env,
+      country: cnt,
+      parallel: par,
+      urlBackoffice: cfgUrlBackoffice,
+      urlEshopHomepage: cfgUrlEshopHomepage
+    };
+
+ // var evars= java.lang.System.getenv();
+ // karate.log(evars);
+
+  karate.configure('afterScenario', read('afterScenarioScreenshot.js'))
+
+  karate.configure('retry',{ count:6, interval:10000});
+  karate.configure('driver',{ type:'chrome', headless})
+
+  karate.configure('connectTimeout', 25000);
+  karate.configure('readTimeout', 25000);
+  return config;
+}, <eval>:48:53 Expected : but found }
+  karate.configure('driver',{ type:'chrome', headless})
+                                                     ^ in <eval> at line number 48 at column number 53
+1
+1 < Pragma: no-cache
+1 < Server: cloudflare
+1 < Set-Cookie: __cfduid=d5590dd64b81e687bec22d622ff9a06fd1585141257; expires=Fri, 24-Apr-20 13:00:57 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax
+1 < Transfer-Encoding: chunked
+1 < Vary: Origin, Accept-Encoding
+1 < Via: 1.1 vegur
+1 < X-Content-Type-Options: nosniff
+1 < X-Powered-By: Express
+[
+  {
+    "id": 1,
+    "name": "Leanne Graham",
+    "username": "Bret",
+    "email": "Sincere@april.biz",
+    "address": {
+      "street": "Kulas Light",
+      "suite": "Apt. 556",
+      "city": "Gwenborough",
+      "zipcode": "92998-3874",
+      "geo": {
+        "lat": "-37.3159",
+        "lng": "81.1496"
+      }
+    },
+    "phone": "1-770-736-8031 x56442",
+    "website": "hildegard.org",
+    "company": {
+      "name": "Romaguera-Crona",
+      "catchPhrase": "Multi-layered client-server neural-net",
+      "bs": "harness real-time e-markets"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Ervin Howell",
+    "username": "Antonette",
+    "email": "Shanna@melissa.tv",
+    "address": {
+      "street": "Victor Plains",
+      "suite": "Suite 879",
+      "city": "Wisokyburgh",
+      "zipcode": "90566-7771",
+      "geo": {
+        "lat": "-43.9509",
+        "lng": "-34.4618"
+      }
+    },
+    "phone": "010-692-6593 x09125",
+    "website": "anastasia.net",
+    "company": {
+      "name": "Deckow-Crist",
+      "catchPhrase": "Proactive didactic contingency",
+      "bs": "synergize scalable supply-chains"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Clementine Bauch",
+    "username": "Samantha",
+    "email": "Nathan@yesenia.net",
+    "address": {
+      "street": "Douglas Extension",
+      "suite": "Suite 847",
+      "city": "McKenziehaven",
+      "zipcode": "59590-4157",
+      "geo": {
+        "lat": "-68.6102",
+        "lng": "-47.0653"
+      }
+    },
+    "phone": "1-463-123-4447",
+    "website": "ramiro.info",
+    "company": {
+      "name": "Romaguera-Jacobson",
+      "catchPhrase": "Face to face bifurcated interface",
+      "bs": "e-enable strategic applications"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Patricia Lebsack",
+    "username": "Karianne",
+    "email": "Julianne.OConner@kory.org",
+    "address": {
+      "street": "Hoeger Mall",
+      "suite": "Apt. 692",
+      "city": "South Elvis",
+      "zipcode": "53919-4257",
+      "geo": {
+        "lat": "29.4572",
+        "lng": "-164.2990"
+      }
+    },
+    "phone": "493-170-9623 x156",
+    "website": "kale.biz",
+    "company": {
+      "name": "Robel-Corkery",
+      "catchPhrase": "Multi-tiered zero tolerance productivity",
+      "bs": "transition cutting-edge web services"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Chelsey Dietrich",
+    "username": "Kamren",
+    "email": "Lucio_Hettinger@annie.ca",
+    "address": {
+      "street": "Skiles Walks",
+      "suite": "Suite 351",
+      "city": "Roscoeview",
+      "zipcode": "33263",
+      "geo": {
+        "lat": "-31.8129",
+        "lng": "62.5342"
+      }
+    },
+    "phone": "(254)954-1289",
+    "website": "demarco.info",
+    "company": {
+      "name": "Keebler LLC",
+      "catchPhrase": "User-centric fault-tolerant solution",
+      "bs": "revolutionize end-to-end systems"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Mrs. Dennis Schulist",
+    "username": "Leopoldo_Corkery",
+    "email": "Karley_Dach@jasper.info",
+    "address": {
+      "street": "Norberto Crossing",
+      "suite": "Apt. 950",
+      "city": "South Christy",
+      "zipcode": "23505-1337",
+      "geo": {
+        "lat": "-71.4197",
+        "lng": "71.7478"
+      }
+    },
+    "phone": "1-477-935-8478 x6430",
+    "website": "ola.org",
+    "company": {
+      "name": "Considine-Lockman",
+      "catchPhrase": "Synchronised bottom-line interface",
+      "bs": "e-enable innovative applications"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Kurtis Weissnat",
+    "username": "Elwyn.Skiles",
+    "email": "Telly.Hoeger@billy.biz",
+    "address": {
+      "street": "Rex Trail",
+      "suite": "Suite 280",
+      "city": "Howemouth",
+      "zipcode": "58804-1099",
+      "geo": {
+        "lat": "24.8918",
+        "lng": "21.8984"
+      }
+    },
+    "phone": "210.067.6132",
+    "website": "elvis.io",
+    "company": {
+      "name": "Johns Group",
+      "catchPhrase": "Configurable multimedia task-force",
+      "bs": "generate enterprise e-tailers"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Nicholas Runolfsdottir V",
+    "username": "Maxime_Nienow",
+    "email": "Sherwood@rosamond.me",
+    "address": {
+      "street": "Ellsworth Summit",
+      "suite": "Suite 729",
+      "city": "Aliyaview",
+      "zipcode": "45169",
+      "geo": {
+        "lat": "-14.3990",
+        "lng": "-120.7677"
+      }
+    },
+    "phone": "586.493.6943 x140",
+    "website": "jacynthe.com",
+    "company": {
+      "name": "Abernathy Group",
+      "catchPhrase": "Implemented secondary concept",
+      "bs": "e-enable extensible e-tailers"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Glenna Reichert",
+    "username": "Delphine",
+    "email": "Chaim_McDermott@dana.io",
+    "address": {
+      "street": "Dayna Park",
+      "suite": "Suite 449",
+      "city": "Bartholomebury",
+      "zipcode": "76495-3109",
+      "geo": {
+        "lat": "24.6463",
+        "lng": "-168.8889"
+      }
+    },
+    "phone": "(775)976-6794 x41206",
+    "website": "conrad.com",
+    "company": {
+      "name": "Yost and Sons",
+      "catchPhrase": "Switchable contextually-based project",
+      "bs": "aggregate real-time technologies"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Clementina DuBuque",
+    "username": "Moriah.Stanton",
+    "email": "Rey.Padberg@karina.biz",
+    "address": {
+      "street": "Kattie Turnpike",
+      "suite": "Suite 198",
+      "city": "Lebsackbury",
+      "zipcode": "31428-2261",
+      "geo": {
+        "lat": "-38.2386",
+        "lng": "57.2232"
+      }
+    },
+    "phone": "024-648-3804",
+    "website": "ambrose.net",
+    "company": {
+      "name": "Hoeger LLC",
+      "catchPhrase": "Centralized empowering task-force",
+      "bs": "target end-to-end models"
+    }
+  }
+]
+
+14:00:57.341 request:
+2 > GET https://jsonplaceholder.typicode.com/users/1
+2 > Accept-Encoding: gzip,deflate
+2 > Connection: Keep-Alive
+2 > Cookie: __cfduid=d5590dd64b81e687bec22d622ff9a06fd1585141257
+2 > Host: jsonplaceholder.typicode.com
+2 > User-Agent: Apache-HttpClient/4.5.11 (Java/12.0.2)
+
+14:00:57.410 response time in milliseconds: 67,59
+2 < 200
+2 < Access-Control-Allow-Credentials: true
+2 < Age: 1567
+2 < CF-Cache-Status: HIT
+2 < CF-RAY: 5798d15abe93f9d6-PRG
+2 < Cache-Control: max-age=14400
+2 < Connection: keep-alive
+2 < Content-Type: application/json; charset=utf-8
+2 < Date: Wed, 25 Mar 2020 13:00:57 GMT
+2 < Etag: W/"1fd-+2Y3G3w049iSZtw5t1mzSnunngE"
+2 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+2 < Expires: -1
+2 < Pragma: no-cache
+2 < Server: cloudflare
+2 < Transfer-Encoding: chunked
+2 < Vary: Origin, Accept-Encoding
+2 < Via: 1.1 vegur
+2 < X-Content-Type-Options: nosniff
+2 < X-Powered-By: Express
+{
+  "id": 1,
+  "name": "Leanne Graham",
+  "username": "Bret",
+  "email": "Sincere@april.biz",
+  "address": {
+    "street": "Kulas Light",
+    "suite": "Apt. 556",
+    "city": "Gwenborough",
+    "zipcode": "92998-3874",
+    "geo": {
+      "lat": "-37.3159",
+      "lng": "81.1496"
+    }
+  },
+  "phone": "1-770-736-8031 x56442",
+  "website": "hildegard.org",
+  "company": {
+    "name": "Romaguera-Crona",
+    "catchPhrase": "Multi-layered client-server neural-net",
+    "bs": "harness real-time e-markets"
+  }
+}
+
+14:00:57.420 karate.env system property was:  
+14:00:57.423 request:
+1 > POST https://jsonplaceholder.typicode.com/users
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 160
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: jsonplaceholder.typicode.com
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/12.0.2)
+{"name":"Test User","username":"testuser","email":"test@user.com","address":{"street":"Has No Name","suite":"Apt. 123","city":"Electri","zipcode":"54321-6789"}}
+
+14:00:57.941 response time in milliseconds: 517,25
+1 < 201
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Expose-Headers: Location
+1 < CF-Cache-Status: DYNAMIC
+1 < CF-RAY: 5798d15c0e2ef9e6-PRG
+1 < Cache-Control: no-cache
+1 < Connection: keep-alive
+1 < Content-Length: 216
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Wed, 25 Mar 2020 13:00:57 GMT
+1 < Etag: W/"d8-pYV7+YuMGP2hxHPU9ARrf97ifDA"
+1 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 < Expires: -1
+1 < Location: http://jsonplaceholder.typicode.com/users/11
+1 < Pragma: no-cache
+1 < Server: cloudflare
+1 < Set-Cookie: __cfduid=d7d97957cc9a17bfc6366f91699c3ef4c1585141257; expires=Fri, 24-Apr-20 13:00:57 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax
+1 < Vary: Origin, X-HTTP-Method-Override, Accept-Encoding
+1 < Via: 1.1 vegur
+1 < X-Content-Type-Options: nosniff
+1 < X-Powered-By: Express
+{
+  "name": "Test User",
+  "username": "testuser",
+  "email": "test@user.com",
+  "address": {
+    "street": "Has No Name",
+    "suite": "Apt. 123",
+    "city": "Electri",
+    "zipcode": "54321-6789"
+  },
+  "id": 11
+}
+
+14:00:57.943 [print] created id is:  11
+14:00:57.950 karate.env system property was:  
+14:00:57.951 type was null, defaulting to 'chrome'
+14:00:57.952 preferred port 9222 not available, will use: 64878
+14:01:17.793 waitUntil (js) - retry #1
+14:01:20.842 waitUntil (js) - retry #2
+14:01:27.249 waitUntil (js) - retry #1
+14:01:32.522 waitUntil (js) - retry #2
+14:01:40.104 waitUntil (js) - retry #1
+14:01:43.338 waitUntil (js) - retry #1
+14:01:52.725 waitUntil (js) - retry #1
+14:01:55.759 [print] 2512
+t. 123","city":"Electri","zipcode":"54321-6789"}}
+
+17:44:53.258 response time in milliseconds: 1255,14
+1 < 201
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Expose-Headers: Location
+1 < CF-Cache-Status: DYNAMIC
+1 < CF-RAY: 5791dbf99825f9e2-PRG
+1 < Cache-Control: no-cache
+1 < Connection: keep-alive
+1 < Content-Length: 216
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Tue, 24 Mar 2020 16:44:53 GMT
+1 < Etag: W/"d8-pYV7+YuMGP2hxHPU9ARrf97ifDA"
+1 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 < Expires: -1
+1 < Location: http://jsonplaceholder.typicode.com/users/11
+1 < Pragma: no-cache
+1 < Server: cloudflare
+1 < Set-Cookie: __cfduid=d759c976a3b4d37c0268cad901b1a20051585068292; expires=Thu, 23-Apr-20 16:44:52 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax
+1 < Vary: Origin, X-HTTP-Method-Override, Accept-Encoding
+1 < Via: 1.1 vegur
+1 < X-Content-Type-Options: nosniff
+1 < X-Powered-By: Express
+{
+  "name": "Test User",
+  "username": "testuser",
+  "email": "test@user.com",
+  "address": {
+    "street": "Has No Name",
+    "suite": "Apt. 123",
+    "city": "Electri",
+    "zipcode": "54321-6789"
+  },
+  "id": 11
+}
+
+17:44:53.260 [print] created id is:  11
+17:44:53.296 karate.env system property was:  
+17:44:53.299 request:
+1 > GET https://jsonplaceholder.typicode.com/users
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: jsonplaceholder.typicode.com
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/12.0.2)
+
+17:44:53.363 response time in milliseconds: 61,79
+1 < 200
+1 < Access-Control-Allow-Credentials: true
+1 < Age: 3695
+1 < CF-Cache-Status: HIT
+1 < CF-RAY: 5791dc016f973e3c-PRG
+1 < Cache-Control: max-age=14400
+1 < Connection: keep-alive
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Tue, 24 Mar 2020 16:44:53 GMT
+1 < Etag: W/"160d-1eMSsxeJRfnVLRBmYJSbCiJZ1qQ"
+1 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 < Expires: -1
+1 < Pragma: no-cache
+1 < Server: cloudflare
+1 < Set-Cookie: __cfduid=d1f7276d6de27e47ffe0b86686af5aae51585068293; expires=Thu, 23-Apr-20 16:44:53 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax
+1 < Transfer-Encoding: chunked
+1 < Vary: Origin, Accept-Encoding
+1 < Via: 1.1 vegur
+1 < X-Content-Type-Options: nosniff
+1 < X-Powered-By: Express
+[
+  {
+    "id": 1,
+    "name": "Leanne Graham",
+    "username": "Bret",
+    "email": "Sincere@april.biz",
+    "address": {
+      "street": "Kulas Light",
+      "suite": "Apt. 556",
+      "city": "Gwenborough",
+      "zipcode": "92998-3874",
+      "geo": {
+        "lat": "-37.3159",
+        "lng": "81.1496"
+      }
+    },
+    "phone": "1-770-736-8031 x56442",
+    "website": "hildegard.org",
+    "company": {
+      "name": "Romaguera-Crona",
+      "catchPhrase": "Multi-layered client-server neural-net",
+      "bs": "harness real-time e-markets"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Ervin Howell",
+    "username": "Antonette",
+    "email": "Shanna@melissa.tv",
+    "address": {
+      "street": "Victor Plains",
+      "suite": "Suite 879",
+      "city": "Wisokyburgh",
+      "zipcode": "90566-7771",
+      "geo": {
+        "lat": "-43.9509",
+        "lng": "-34.4618"
+      }
+    },
+    "phone": "010-692-6593 x09125",
+    "website": "anastasia.net",
+    "company": {
+      "name": "Deckow-Crist",
+      "catchPhrase": "Proactive didactic contingency",
+      "bs": "synergize scalable supply-chains"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Clementine Bauch",
+    "username": "Samantha",
+    "email": "Nathan@yesenia.net",
+    "address": {
+      "street": "Douglas Extension",
+      "suite": "Suite 847",
+      "city": "McKenziehaven",
+      "zipcode": "59590-4157",
+      "geo": {
+        "lat": "-68.6102",
+        "lng": "-47.0653"
+      }
+    },
+    "phone": "1-463-123-4447",
+    "website": "ramiro.info",
+    "company": {
+      "name": "Romaguera-Jacobson",
+      "catchPhrase": "Face to face bifurcated interface",
+      "bs": "e-enable strategic applications"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Patricia Lebsack",
+    "username": "Karianne",
+    "email": "Julianne.OConner@kory.org",
+    "address": {
+      "street": "Hoeger Mall",
+      "suite": "Apt. 692",
+      "city": "South Elvis",
+      "zipcode": "53919-4257",
+      "geo": {
+        "lat": "29.4572",
+        "lng": "-164.2990"
+      }
+    },
+    "phone": "493-170-9623 x156",
+    "website": "kale.biz",
+    "company": {
+      "name": "Robel-Corkery",
+      "catchPhrase": "Multi-tiered zero tolerance productivity",
+      "bs": "transition cutting-edge web services"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Chelsey Dietrich",
+    "username": "Kamren",
+    "email": "Lucio_Hettinger@annie.ca",
+    "address": {
+      "street": "Skiles Walks",
+      "suite": "Suite 351",
+      "city": "Roscoeview",
+      "zipcode": "33263",
+      "geo": {
+        "lat": "-31.8129",
+        "lng": "62.5342"
+      }
+    },
+    "phone": "(254)954-1289",
+    "website": "demarco.info",
+    "company": {
+      "name": "Keebler LLC",
+      "catchPhrase": "User-centric fault-tolerant solution",
+      "bs": "revolutionize end-to-end systems"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Mrs. Dennis Schulist",
+    "username": "Leopoldo_Corkery",
+    "email": "Karley_Dach@jasper.info",
+    "address": {
+      "street": "Norberto Crossing",
+      "suite": "Apt. 950",
+      "city": "South Christy",
+      "zipcode": "23505-1337",
+      "geo": {
+        "lat": "-71.4197",
+        "lng": "71.7478"
+      }
+    },
+    "phone": "1-477-935-8478 x6430",
+    "website": "ola.org",
+    "company": {
+      "name": "Considine-Lockman",
+      "catchPhrase": "Synchronised bottom-line interface",
+      "bs": "e-enable innovative applications"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Kurtis Weissnat",
+    "username": "Elwyn.Skiles",
+    "email": "Telly.Hoeger@billy.biz",
+    "address": {
+      "street": "Rex Trail",
+      "suite": "Suite 280",
+      "city": "Howemouth",
+      "zipcode": "58804-1099",
+      "geo": {
+        "lat": "24.8918",
+        "lng": "21.8984"
+      }
+    },
+    "phone": "210.067.6132",
+    "website": "elvis.io",
+    "company": {
+      "name": "Johns Group",
+      "catchPhrase": "Configurable multimedia task-force",
+      "bs": "generate enterprise e-tailers"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Nicholas Runolfsdottir V",
+    "username": "Maxime_Nienow",
+    "email": "Sherwood@rosamond.me",
+    "address": {
+      "street": "Ellsworth Summit",
+      "suite": "Suite 729",
+      "city": "Aliyaview",
+      "zipcode": "45169",
+      "geo": {
+        "lat": "-14.3990",
+        "lng": "-120.7677"
+      }
+    },
+    "phone": "586.493.6943 x140",
+    "website": "jacynthe.com",
+    "company": {
+      "name": "Abernathy Group",
+      "catchPhrase": "Implemented secondary concept",
+      "bs": "e-enable extensible e-tailers"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Glenna Reichert",
+    "username": "Delphine",
+    "email": "Chaim_McDermott@dana.io",
+    "address": {
+      "street": "Dayna Park",
+      "suite": "Suite 449",
+      "city": "Bartholomebury",
+      "zipcode": "76495-3109",
+      "geo": {
+        "lat": "24.6463",
+        "lng": "-168.8889"
+      }
+    },
+    "phone": "(775)976-6794 x41206",
+    "website": "conrad.com",
+    "company": {
+      "name": "Yost and Sons",
+      "catchPhrase": "Switchable contextually-based project",
+      "bs": "aggregate real-time technologies"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Clementina DuBuque",
+    "username": "Moriah.Stanton",
+    "email": "Rey.Padberg@karina.biz",
+    "address": {
+      "street": "Kattie Turnpike",
+      "suite": "Suite 198",
+      "city": "Lebsackbury",
+      "zipcode": "31428-2261",
+      "geo": {
+        "lat": "-38.2386",
+        "lng": "57.2232"
+      }
+    },
+    "phone": "024-648-3804",
+    "website": "ambrose.net",
+    "company": {
+      "name": "Hoeger LLC",
+      "catchPhrase": "Centralized empowering task-force",
+      "bs": "target end-to-end models"
+    }
+  }
+]
+
+17:44:53.368 request:
+2 > GET https://jsonplaceholder.typicode.com/users/1
+2 > Accept-Encoding: gzip,deflate
+2 > Connection: Keep-Alive
+2 > Cookie: __cfduid=d1f7276d6de27e47ffe0b86686af5aae51585068293
+2 > Host: jsonplaceholder.typicode.com
+2 > User-Agent: Apache-HttpClient/4.5.11 (Java/12.0.2)
+
+17:44:53.419 response time in milliseconds: 50,23
+2 < 200
+2 < Access-Control-Allow-Credentials: true
+2 < Age: 5746
+2 < CF-Cache-Status: HIT
+2 < CF-RAY: 5791dc01b9563e00-PRG
+2 < Cache-Control: max-age=14400
+2 < Connection: keep-alive
+2 < Content-Type: application/json; charset=utf-8
+2 < Date: Tue, 24 Mar 2020 16:44:53 GMT
+2 < Etag: W/"1fd-+2Y3G3w049iSZtw5t1mzSnunngE"
+2 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+2 < Expires: -1
+2 < Pragma: no-cache
+2 < Server: cloudflare
+2 < Transfer-Encoding: chunked
+2 < Vary: Origin, Accept-Encoding
+2 < Via: 1.1 vegur
+2 < X-Content-Type-Options: nosniff
+2 < X-Powered-By: Express
+{
+  "id": 1,
+  "name": "Leanne Graham",
+  "username": "Bret",
+  "email": "Sincere@april.biz",
+  "address": {
+    "street": "Kulas Light",
+    "suite": "Apt. 556",
+    "city": "Gwenborough",
+    "zipcode": "92998-3874",
+    "geo": {
+      "lat": "-37.3159",
+      "lng": "81.1496"
+    }
+  },
+  "phone": "1-770-736-8031 x56442",
+  "website": "hildegard.org",
+  "company": {
+    "name": "Romaguera-Crona",
+    "catchPhrase": "Multi-layered client-server neural-net",
+    "bs": "harness real-time e-markets"
+  }
+}
+
+17:44:53.430 karate.env system property was:  
+17:44:53.434 request:
+1 > POST https://jsonplaceholder.typicode.com/users
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 160
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: jsonplaceholder.typicode.com
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/12.0.2)
+{"name":"Test User","username":"testuser","email":"test@user.com","address":{"street":"Has No Name","suite":"Apt. 123","city":"Electri","zipcode":"54321-6789"}}
+
+17:44:54.297 response time in milliseconds: 862,98
+1 < 201
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Expose-Headers: Location
+1 < CF-Cache-Status: DYNAMIC
+1 < CF-RAY: 5791dc021a48f9ce-PRG
+1 < Cache-Control: no-cache
+1 < Connection: keep-alive
+1 < Content-Length: 216
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Tue, 24 Mar 2020 16:44:54 GMT
+1 < Etag: W/"d8-pYV7+YuMGP2hxHPU9ARrf97ifDA"
+1 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 < Expires: -1
+1 < Location: http://jsonplaceholder.typicode.com/users/11
+1 < Pragma: no-cache
+1 < Server: cloudflare
+1 < Set-Cookie: __cfduid=d088a128a8153febfd469738ca5e570551585068293; expires=Thu, 23-Apr-20 16:44:53 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax
+1 < Vary: Origin, X-HTTP-Method-Override, Accept-Encoding
+1 < Via: 1.1 vegur
+1 < X-Content-Type-Options: nosniff
+1 < X-Powered-By: Express
+{
+  "name": "Test User",
+  "username": "testuser",
+  "email": "test@user.com",
+  "address": {
+    "street": "Has No Name",
+    "suite": "Apt. 123",
+    "city": "Electri",
+    "zipcode": "54321-6789"
+  },
+  "id": 11
+}
+
+17:44:54.299 [print] created id is:  11
+17:44:54.352 karate.env system property was:  
+17:44:54.363 type was null, defaulting to 'chrome'
+17:45:08.356 waitUntil (js) - retry #1
+17:45:11.750 waitUntil (js) - retry #2
+17:45:15.258 waitUntil (js) - retry #1
+17:45:18.373 waitUntil (js) - retry #1
+17:45:25.932 waitUntil (js) - retry #1
+17:45:28.962 [print] 2469

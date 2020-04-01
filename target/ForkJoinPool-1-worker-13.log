@@ -1,0 +1,10 @@
+01:40:30.690 karate.env system property was:  
+01:40:30.747 type was null, defaulting to 'chrome'
+01:40:30.787 preferred port 9222 not available, will use: 61411
+01:38:33.977 waitUntil (js) - retry #1
+01:38:47.403 waitUntil (js) - retry #1
+01:38:50.461 waitUntil (js) - retry #2
+01:38:56.915 waitUntil (js) - retry #1
+01:39:00.017 waitUntil (js) - retry #1
+01:39:07.428 waitUntil (js) - retry #1
+01:39:10.438 [print] 2481

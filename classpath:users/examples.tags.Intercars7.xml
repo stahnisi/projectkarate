@@ -1,0 +1,105 @@
+<testsuite failures="1" name="examples/tags/Intercars7.feature" skipped="0" tests="2" time="102.593568">
+  <testcase classname="examples.tags.Intercars7" name="put some item to basket" time="34.759671">
+    <system-out>Given driver 'https://storefront-cz-v1-sit.cze.nonprod.ic.oxuscloud.com/cz/eshop/' . passed
+Then waitFor('a[data-testid=ShoppingRoute_ShoppingLayout_Menu_MenuItem_Link]').click() . passed
+Then waitFor('{^span}Koupit').click() ..................................... passed
+Then waitForText('/html/body/div[1]/div/div[2]/div/div/div/div[2]/a/div[1]', '1').click() . passed
+Then click('/html/body/div[1]/div/div[2]/div/div/div/div[2]/a/div[1]') .... passed
+Then waitFor('button[data-testid=Checkout_BasketOverviewWithQuote_BasketOverview_ButtonBar_NextBtn_PrimaryBtn]').click() . passed
+Then waitFor('span[data-testid=Checkout_DeliveryPaymentSelection_DeliverySelection_AvailableDeliveries_DeliveryMethods_2_DeliveryGroup_DeliveryItem_DeliveryRow_CheckBox]').click() . passed
+Then waitFor('span[data-testid=Checkout_DeliveryPaymentSelection_PaymentSection_0_PaymentRow_CheckBox]').click() . passed
+Then waitFor('span[data-testid=Checkout_DeliveryPaymentSelection_PaymentSection_0_PaymentRow_CheckBox]').click() . passed
+Then waitFor('button[data-testid=Checkout_DeliveryPaymentSelection_ButtonBar_NextBtn_PrimaryBtn]').click() . passed
+Then input('input[data-testid=Checkout_UserDataSelection_EmailRow_Input]', 'testtest@testklkl.cc') . passed
+Then input('input[data-testid=Checkout_UserDataSelection_UserForm_UserForm_Phone]', '+420111222333') . passed
+Then click('/html/body/div[1]/div[1]/main/div/div/div[1]/section[1]/form/div[3]/div/div[1]/div[1]/span/div') . passed
+Then click('li[data-testid=Checkout_UserDataSelection_UserForm_UserForm_Salutation_FormSelectInput_0_SelectItem_Item]') . passed
+Then input('input[data-testid=Checkout_UserDataSelection_UserForm_UserForm_Firstname]', 'TEST') . passed
+Then input('input[data-testid=Checkout_UserDataSelection_UserForm_UserForm_Lastname]', 'TEST') . passed
+Then click('/html/body/div[1]/div[1]/main/div/div/div[1]/section[1]/form/div[6]/div/div/input') . passed
+Then input('input[data-testid=Checkout_UserDataSelection_UserForm_UserForm_Street]', 'street') . passed
+Then input('input[data-testid=Checkout_UserDataSelection_UserForm_UserForm_StreetNumber]', '11') . passed
+Then input('input[data-testid=Checkout_UserDataSelection_UserForm_UserForm_City]', 'city') . passed
+Then input('input[data-testid=Checkout_UserDataSelection_UserForm_UserForm_Zip]', '00000') . passed
+Then click('div[data-testid=Checkout_UserDataSelection_UserForm_UserForm_Switch]') . passed
+Then click('div[data-testid=Checkout_UserDataSelection_UserForm_UserForm_Switch]') . passed
+Then click('span[data-testid=Checkout_UserDataSelection_MarketingConsent_marketing_CheckBox]') . passed
+Then click('span[data-testid=Checkout_UserDataSelection_MarketingConsent_heureka_CheckBox]') . passed
+Then click('button[data-testid=Checkout_UserDataSelection_ButtonBar_NextBtn_PrimaryBtn]') . passed
+Then click('span[data-testid=Checkout_Recapitulation_GdprAreements_CheckBox]') . passed
+Then click('button[data-testid=Checkout_Recapitulation_ButtonBar_NextBtn_PrimaryBtn]') . passed
+Then waitFor('/html/body/div[1]/div[1]/main/div/div/div[1]/div[2]/span[2]') . passed
+Then def orderNumber = text('/html/body/div[1]/div[1]/main/div/div/div[1]/div[2]/span[2]') . passed
+Then print orderNumber .................................................... passed</system-out>
+  </testcase>
+  <testcase classname="examples.tags.Intercars7" name="put some item to basket" time="67.833896">
+    <failure message="Intercars7.feature:39 - driver config / start failed: &#10;org.apache.http.conn.HttpHostConnectException: Connect to localhost:63324 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused), options: {type=chrome, target=null}">Given driver 'https://storefront-cz-v1-sit.cze.nonprod.ic.oxuscloud.com/cz/eshop/' . passed
+Then waitFor('a[data-testid=ShoppingRoute_ShoppingLayout_Menu_MenuItem_Link]').click() . passed
+Then waitFor('{^span}Koupit').click() ..................................... passed
+Then waitForText('/html/body/div[1]/div/div[2]/div/div/div/div[2]/a/div[1]', '1').click() . passed
+Then click('/html/body/div[1]/div/div[2]/div/div/div/div[2]/a/div[1]') .... passed
+Then waitFor('button[data-testid=Checkout_BasketOverviewWithQuote_BasketOverview_ButtonBar_NextBtn_PrimaryBtn]').click() . passed
+Then waitFor('span[data-testid=Checkout_DeliveryPaymentSelection_DeliverySelection_AvailableDeliveries_DeliveryMethods_2_DeliveryGroup_DeliveryItem_DeliveryRow_CheckBox]').click() . passed
+Then waitFor('span[data-testid=Checkout_DeliveryPaymentSelection_PaymentSection_0_PaymentRow_CheckBox]').click() . passed
+Then waitFor('span[data-testid=Checkout_DeliveryPaymentSelection_PaymentSection_0_PaymentRow_CheckBox]').click() . passed
+Then waitFor('button[data-testid=Checkout_DeliveryPaymentSelection_ButtonBar_NextBtn_PrimaryBtn]').click() . passed
+Then input('input[data-testid=Checkout_UserDataSelection_EmailRow_Input]', 'testtest@testklkl.cc') . passed
+Then input('input[data-testid=Checkout_UserDataSelection_UserForm_UserForm_Phone]', '+420111222333') . passed
+Then click('/html/body/div[1]/div[1]/main/div/div/div[1]/section[1]/form/div[3]/div/div[1]/div[1]/span/div') . passed
+Then click('li[data-testid=Checkout_UserDataSelection_UserForm_UserForm_Salutation_FormSelectInput_0_SelectItem_Item]') . passed
+Then input('input[data-testid=Checkout_UserDataSelection_UserForm_UserForm_Firstname]', 'TEST') . passed
+Then input('input[data-testid=Checkout_UserDataSelection_UserForm_UserForm_Lastname]', 'TEST') . passed
+Then click('/html/body/div[1]/div[1]/main/div/div/div[1]/section[1]/form/div[6]/div/div/input') . passed
+Then input('input[data-testid=Checkout_UserDataSelection_UserForm_UserForm_Street]', 'street') . passed
+Then input('input[data-testid=Checkout_UserDataSelection_UserForm_UserForm_StreetNumber]', '11') . passed
+Then input('input[data-testid=Checkout_UserDataSelection_UserForm_UserForm_City]', 'city') . passed
+Then input('input[data-testid=Checkout_UserDataSelection_UserForm_UserForm_Zip]', '00000') . passed
+Then click('div[data-testid=Checkout_UserDataSelection_UserForm_UserForm_Switch]') . passed
+Then click('div[data-testid=Checkout_UserDataSelection_UserForm_UserForm_Switch]') . passed
+Then click('span[data-testid=Checkout_UserDataSelection_MarketingConsent_marketing_CheckBox]') . passed
+Then click('span[data-testid=Checkout_UserDataSelection_MarketingConsent_heureka_CheckBox]') . passed
+Then click('button[data-testid=Checkout_UserDataSelection_ButtonBar_NextBtn_PrimaryBtn]') . passed
+Then click('span[data-testid=Checkout_Recapitulation_GdprAreements_CheckBox]') . passed
+Then click('button[data-testid=Checkout_Recapitulation_ButtonBar_NextBtn_PrimaryBtn]') . passed
+Then waitFor('/html/body/div[1]/div[1]/main/div/div/div[1]/div[2]/span[2]') . passed
+Then def orderNumber = text('/html/body/div[1]/div[1]/main/div/div/div[1]/div[2]/span[2]') . passed
+Then print orderNumber .................................................... passed
+Given driver 'https://storefront-cz-v1-sit.cze.nonprod.ic.oxuscloud.com/cz/eshop/' . failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Intercars7.feature:39 - driver config / start failed: 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:63324 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused), options: {type=chrome, target=null}
+	at ✽.Given driver 'https://storefront-cz-v1-sit.cze.nonprod.ic.oxuscloud.com/cz/eshop/' (Intercars7.feature:39)
+
+Then waitFor('a[data-testid=ShoppingRoute_ShoppingLayout_Menu_MenuItem_Link]').click() . skipped
+Then waitFor('{^span}Koupit').click() ..................................... skipped
+Then waitForText('/html/body/div[1]/div/div[2]/div/div/div/div[2]/a/div[1]', '1').click() . skipped
+Then click('/html/body/div[1]/div/div[2]/div/div/div/div[2]/a/div[1]') .... skipped
+Then waitFor('button[data-testid=Checkout_BasketOverviewWithQuote_BasketOverview_ButtonBar_NextBtn_PrimaryBtn]').click() . skipped
+Then waitFor('span[data-testid=Checkout_DeliveryPaymentSelection_DeliverySelection_AvailableDeliveries_DeliveryMethods_2_DeliveryGroup_DeliveryItem_DeliveryRow_CheckBox]').click() . skipped
+Then waitFor('span[data-testid=Checkout_DeliveryPaymentSelection_PaymentSection_0_PaymentRow_CheckBox]').click() . skipped
+Then waitFor('span[data-testid=Checkout_DeliveryPaymentSelection_PaymentSection_0_PaymentRow_CheckBox]').click() . skipped
+Then waitFor('button[data-testid=Checkout_DeliveryPaymentSelection_ButtonBar_NextBtn_PrimaryBtn]').click() . skipped
+Then input('input[data-testid=Checkout_UserDataSelection_EmailRow_Input]', 'testtest@testklkl.cc') . skipped
+Then input('input[data-testid=Checkout_UserDataSelection_UserForm_UserForm_Phone]', '+420111222333') . skipped
+Then click('/html/body/div[1]/div[1]/main/div/div/div[1]/section[1]/form/div[3]/div/div[1]/div[1]/span/div') . skipped
+Then click('li[data-testid=Checkout_UserDataSelection_UserForm_UserForm_Salutation_FormSelectInput_0_SelectItem_Item]') . skipped
+Then input('input[data-testid=Checkout_UserDataSelection_UserForm_UserForm_Firstname]', 'TEST') . skipped
+Then input('input[data-testid=Checkout_UserDataSelection_UserForm_UserForm_Lastname]', 'TEST') . skipped
+Then click('/html/body/div[1]/div[1]/main/div/div/div[1]/section[1]/form/div[6]/div/div/input') . skipped
+Then input('input[data-testid=Checkout_UserDataSelection_UserForm_UserForm_Street]', 'street') . skipped
+Then input('input[data-testid=Checkout_UserDataSelection_UserForm_UserForm_StreetNumber]', '11') . skipped
+Then input('input[data-testid=Checkout_UserDataSelection_UserForm_UserForm_City]', 'city') . skipped
+Then input('input[data-testid=Checkout_UserDataSelection_UserForm_UserForm_Zip]', '00000') . skipped
+Then click('div[data-testid=Checkout_UserDataSelection_UserForm_UserForm_Switch]') . skipped
+Then click('div[data-testid=Checkout_UserDataSelection_UserForm_UserForm_Switch]') . skipped
+Then click('span[data-testid=Checkout_UserDataSelection_MarketingConsent_marketing_CheckBox]') . skipped
+Then click('span[data-testid=Checkout_UserDataSelection_MarketingConsent_heureka_CheckBox]') . skipped
+Then click('button[data-testid=Checkout_UserDataSelection_ButtonBar_NextBtn_PrimaryBtn]') . skipped
+Then click('span[data-testid=Checkout_Recapitulation_GdprAreements_CheckBox]') . skipped
+Then click('button[data-testid=Checkout_Recapitulation_ButtonBar_NextBtn_PrimaryBtn]') . skipped
+Then waitFor('/html/body/div[1]/div[1]/main/div/div/div[1]/div[2]/span[2]') . skipped
+Then def orderNumber = text('/html/body/div[1]/div[1]/main/div/div/div[1]/div[2]/span[2]') . skipped
+Then print orderNumber .................................................... skipped</failure>
+  </testcase>
+</testsuite>
